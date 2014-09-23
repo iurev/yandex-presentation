@@ -75,3 +75,37 @@ h6 {
   margin: 3% auto;
   padding: 50px 100px;
 }
+.app.contents .slide-buttons {
+  display: none;
+}
+.app.presentation .next {
+  display: none;
+}
+.app.presentation .prev {
+  display: none;
+}
+.slide-buttons {
+  position: fixed;
+  bottom: 5px;
+  left: 120px;
+  margin-left: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.slide-buttons div {
+  cursor: pointer;
+  padding: 5px 10px;
+  width: 100px;
+  height: 20px;
+  background-color: white;
+  text-align: center;
+  border: 1px solid #111000;
+  float: left;
+  display: inline-block;
+  margin: 0 15px;
+}
+.slide-buttons .back {
+  background-color: rgb(240, 240, 240);
+}

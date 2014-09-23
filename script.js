@@ -101,6 +101,7 @@
       var presentations = new Presentations().download().createTableOfContents();
       var slides = new Slides();
       var $app = $('.app');
+      var $slideButtons = $('.slide-buttons');
 
       // avaliable states: contents, presentation, slide
       this.state = 'contents';
@@ -157,6 +158,13 @@
 
       this.init = function() {
         var that = this;
+        $slideButtons.find('.prev')
+          .click(that.slideActions.bind(this, 'prevSlide'));
+        $slideButtons.find('.next')
+          .click(that.slideActions.bind(this, 'nextSlide'));
+        $slideButtons.find('.back')
+          .click(that.back.bind(this));
+
         $(document).keydown(function(e) {
           switch (e.which) {
             case 39:
